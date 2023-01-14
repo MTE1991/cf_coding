@@ -25,10 +25,10 @@ void solve() {
 }
 
 int main() {
-    ll t;
-    cin >> t;
-    while (t--) {
+//    ll t;
+//    cin >> t;
+//    while (t--) {
         solve();
-    }
+//    }
     return 0;
 }
