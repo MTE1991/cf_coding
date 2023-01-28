@@ -6,18 +6,17 @@
 using namespace std;
 
 void solve() {
-    ll n, h, bend = 0;
-    cin >> n >> h;
-    vector<ll> heights(n);
-    for (int i = 0; i < n; i++) cin >> heights[i];
-    for (const auto height : heights) {
-        if (height > h) {
-            bend += 2;
-        } else {
-            bend++;
-        }
+    ll n, count = 0;
+    cin >> n;
+    vector<ll> welfare(n);
+    for (int i = 0; i < n; i++) {
+        cin >> welfare[i];
     }
-    cout << bend << "\n";
+    ll max_val = *max_element(welfare.begin(), welfare.end());
+    for (const auto citizen : welfare) {
+        count += (max_val - citizen);
+    }
+    cout << count << endl;
 }
 
 int main() {
